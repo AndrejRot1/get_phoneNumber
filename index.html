@@ -6,7 +6,7 @@
 <body>
 	<script>
 		// Check if user is using an Android device
-		if (/Android/i.test(navigator.userAgent)) {
+		//if (/Android/i.test(navigator.userAgent)) {
 			// Retrieve phone number from user's contacts
 			navigator.contacts.pickContact(function(contact) {
 				var phoneNumber = contact.phoneNumbers[0].value;
@@ -14,9 +14,9 @@
 			}, function(error) {
 				alert("Failed to retrieve phone number: " + error);
 			});
-		} else {
-			alert("This feature is only available on Android devices.");
-		}
+	//	} else {
+	//		alert("This feature is only available on Android devices.");
+	//	}
 	</script>
 </body>
 </html>
