@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retrieve Phone Number from Android</title>
+</head>
+<body>
+	<script>
+		// Check if user is using an Android device
+		if (/android/i.test(navigator.userAgent)) {
+			// Retrieve phone number from user's contacts
+			navigator.contacts.pickContact(function(contact) {
+				var phoneNumber = contact.phoneNumbers[0].value;
+				alert("Your phone number is: " + phoneNumber);
+			}, function(error) {
+				alert("Failed to retrieve phone number: " + error);
+			});
+		} else {
+			alert("This feature is only available on Android devices.");
+		}
+	</script>
+</body>
+</html>
