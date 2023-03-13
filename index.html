@@ -10,6 +10,7 @@
 			// Retrieve phone number from user's contacts
 			navigator.contacts.pickContact(function(contact) {
 				var phoneNumber = contact.phoneNumbers[0].value;
+				alert(" Cao honey ");
 				alert("Your phone number is: " + phoneNumber);
 			}, function(error) {
 				alert("Failed to retrieve phone number: " + error);
