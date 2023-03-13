@@ -5,9 +5,8 @@
 </head>
 <body>
 	<script>
-		alert(" Cao honey ");
 		// Check if user is using an Android device
-		if (/android/i.test(navigator.userAgent)) {
+		if (/Android/i.test(navigator.userAgent)) {
 			// Retrieve phone number from user's contacts
 			navigator.contacts.pickContact(function(contact) {
 				var phoneNumber = contact.phoneNumbers[0].value;
